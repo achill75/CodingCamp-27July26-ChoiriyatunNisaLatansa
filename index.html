@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To-Do List Life Dashboard for RevoU Coding Camp">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="hero-card card">
+            <div>
+                <p class="eyebrow">LIFE DASHBOARD</p>
+                <h1 id="greetingText">Good Evening</h1>
+                <p id="currentDate" class="date-text">Loading date...</p>
+            </div>
+
+            <div class="hero-actions">
+                <div class="clock-box" aria-label="Current time">
+                    <span id="currentTime">00:00:00</span>
+                </div>
+
+                <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle dark mode">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <section class="card profile-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">PERSONALIZATION</p>
+                        <h2>Your Dashboard</h2>
+                    </div>
+                </div>
+
+                <label for="nameInput">Your name</label>
+                <div class="inline-form">
+                    <input
+                        id="nameInput"
+                        type="text"
+                        maxlength="30"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                    >
+                    <button id="saveNameButton" class="button button-primary" type="button">Save</button>
+                </div>
+                <p class="helper-text">Your name will be used in the greeting and saved in this browser.</p>
+            </section>
+
+            <section class="card timer-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">FOCUS SESSION</p>
+                        <h2>Pomodoro Timer</h2>
+                    </div>
+                    <span id="timerStatus" class="status-badge">Ready</span>
+                </div>
+
+                <div id="timerDisplay" class="timer-display" aria-live="polite">25:00</div>
+
+                <div class="timer-actions">
+                    <button id="startTimerButton" class="button button-primary" type="button">Start</button>
+                    <button id="stopTimerButton" class="button button-secondary" type="button">Stop</button>
+                    <button id="resetTimerButton" class="button button-danger-soft" type="button">Reset</button>
+                </div>
+            </section>
+
+            <section class="card task-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">TODAY'S PLAN</p>
+                        <h2>To-Do List</h2>
+                    </div>
+                    <span id="taskCounter" class="status-badge">0 tasks</span>
+                </div>
+
+                <form id="taskForm" class="stack-form">
+                    <label for="taskInput">Add a new task</label>
+                    <div class="inline-form">
+                        <input
+                            id="taskInput"
+                            type="text"
+                            maxlength="100"
+                            placeholder="Example: Study JavaScript"
+                            required
+                        >
+                        <button class="button button-primary" type="submit">Add Task</button>
+                    </div>
+                    <p id="taskMessage" class="form-message" aria-live="polite"></p>
+                </form>
+
+                <div id="emptyTaskState" class="empty-state">
+                    <div class="empty-icon">✓</div>
+                    <p>No tasks yet. Add your first task above.</p>
+                </div>
+
+                <ul id="taskList" class="task-list" aria-label="Task list"></ul>
+            </section>
+
+            <section class="card links-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">FAVORITE WEBSITES</p>
+                        <h2>Quick Links</h2>
+                    </div>
+                    <span id="linkCounter" class="status-badge">0 links</span>
+                </div>
+
+                <form id="linkForm" class="link-form">
+                    <div>
+                        <label for="linkNameInput">Link name</label>
+                        <input
+                            id="linkNameInput"
+                            type="text"
+                            maxlength="30"
+                            placeholder="Google"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="linkUrlInput">Website URL</label>
+                        <input
+                            id="linkUrlInput"
+                            type="text"
+                            maxlength="200"
+                            placeholder="https://google.com"
+                            required
+                        >
+                    </div>
+
+                    <button class="button button-primary" type="submit">Add Link</button>
+                </form>
+
+                <p id="linkMessage" class="form-message" aria-live="polite"></p>
+
+                <div id="emptyLinkState" class="empty-state">
+                    <div class="empty-icon">↗</div>
+                    <p>No quick links yet. Add your favorite website.</p>
+                </div>
+
+                <div id="quickLinksList" class="quick-links-grid"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Built for RevoU Software Engineering Coding Camp</p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
