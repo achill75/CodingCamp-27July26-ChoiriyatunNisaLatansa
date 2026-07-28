@@ -52,7 +52,3 @@ Tidak diperlukan instalasi package atau backend.
    - Folder: `/root`
 6. Klik **Save**.
 7. Tunggu sampai URL GitHub Pages tersedia.
-
-## Catatan
-
-Pastikan folder `.kiro` ikut di-push ke repository sesuai ketentuan submission.
