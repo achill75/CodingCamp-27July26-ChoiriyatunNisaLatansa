@@ -21,7 +21,7 @@ Mini project untuk **RevoU Software Engineering Coding Camp**.
 ## Struktur Folder
 
 ```text
-CodingCamp-27July26-ChoiriyatunNisa/
+CodingCamp-27July26-ChoiriyatunNisaLatansa/
 ├── .kiro/
 ├── css/
 │   └── style.css
