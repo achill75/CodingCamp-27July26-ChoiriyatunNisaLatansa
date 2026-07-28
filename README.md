@@ -1,4 +1,5 @@
 # To-Do List Life Dashboard
+![To Do List](https://raw.githubusercontent.com/achill75/CodingCamp-27July26-ChoiriyatunNisaLatansa/main/to%20do%20list.jpg)
 
 Mini project untuk **RevoU Software Engineering Coding Camp**.
 
